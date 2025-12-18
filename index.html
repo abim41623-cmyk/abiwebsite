@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lestari.ai - Klasifikasi Lingkungan & Edukasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-600 flex items-center">
+                <i class="fas fa-leaf mr-2"></i> Lestari.ai
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-green-600">Beranda</a>
+                <a href="#ai-scan" class="hover:text-green-600">AI Scanner</a>
+                <a href="#edukasi" class="hover:text-green-600">Edukasi</a>
+                <a href="#komunitas" class="hover:text-green-600">Komunitas</a>
+            </div>
+            <button class="bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition">Gabung</button>
+        </div>
+    </nav>
+
+    <section id="home" class="py-20 bg-green-50">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Kenali Lingkunganmu, <span class="text-green-600">Beraksi untuk Bumi.</span></h1>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Gunakan teknologi AI untuk mengklasifikasi masalah lingkungan di sekitarmu dan pelajari cara mengatasinya melalui edukasi sosial.</p>
+            <a href="#ai-scan" class="bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:shadow-lg transition">Mulai Scan Sekarang</a>
+        </div>
+    </section>
+
+    <section id="ai-scan" class="py-20 container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Deteksi Lingkungan AI</h2>
+            <p class="text-gray-500">Unggah foto sampah atau tanaman untuk dianalisis oleh sistem kami.</p>
+        </div>
+        
+        <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-xl border-2 border-dashed border-green-200">
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <i class="fas fa-cloud-upload-alt text-5xl text-green-500"></i>
+                <p class="text-gray-600">Seret foto ke sini atau klik untuk memilih file</p>
+                <input type="file" id="imageInput" class="hidden" accept="image/*">
+                <button onclick="document.getElementById('imageInput').click()" class="bg-gray-100 px-6 py-2 rounded-md hover:bg-gray-200">Pilih Foto</button>
+            </div>
+            
+            <div id="result" class="mt-8 hidden p-4 bg-green-100 rounded-lg">
+                <p class="font-bold text-green-800">Hasil Analisis:</p>
+                <p id="prediction" class="text-green-700">Menganalisis...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="edukasi" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Pusat Edukasi Sosial</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:scale-105 transition">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=500&q=60" alt="Waste" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Manajemen Sampah</h3>
+                        <p class="text-gray-600 text-sm">Pelajari cara memilah sampah organik dan anorganik secara benar dari rumah.</p>
+                        <a href="#" class="text-green-600 mt-4 inline-block font-semibold">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:scale-105 transition">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=500&q=60" alt="Recycle" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Ekonomi Sirkular</h3>
+                        <p class="text-gray-600 text-sm">Bagaimana mengubah limbah menjadi nilai ekonomi bagi masyarakat lokal.</p>
+                        <a href="#" class="text-green-600 mt-4 inline-block font-semibold">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:scale-105 transition">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=500&q=60" alt="Plants" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Reboisasi Kota</h3>
+                        <p class="text-gray-600 text-sm">Pentingnya menanam pohon di area urban untuk menjaga kualitas udara.</p>
+                        <a href="#" class="text-green-600 mt-4 inline-block font-semibold">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2024 Lestari.ai - Teknologi untuk Masa Depan Hijau.</p>
+            <div class="flex justify-center space-x-6 text-xl">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const resultDiv = document.getElementById('result');
+        const predictionText = document.getElementById('prediction');
+
+        imageInput.addEventListener('change', function() {
+            if(this.files && this.files[0]) {
+                resultDiv.classList.remove('hidden');
+                predictionText.innerText = "Sedang menganalisis gambar...";
+                
+                // Simulasi delay AI
+                setTimeout(() => {
+                    predictionText.innerText = "Terdeteksi: Sampah Plastik (Anorganik). Disarankan untuk dibawa ke Bank Sampah terdekat.";
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
